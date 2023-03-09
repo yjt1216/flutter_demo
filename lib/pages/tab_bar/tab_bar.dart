@@ -86,7 +86,7 @@ class _PersistentBottomState extends State<PersistentBottomPage> {
       PersistentBottomNavBarItem(
         icon: SvgPicture.asset('assets/images/tab/tab_mine_selected.svg'),
         inactiveIcon: SvgPicture.asset('assets/images/tab/tab_mine.svg'),
-        title: ("Settings"),
+        title: ("我的"),
         activeColorPrimary: const Color.fromRGBO(91, 87, 150, 1),
         inactiveColorPrimary: const Color.fromRGBO(140, 140, 140, 1),
       ),

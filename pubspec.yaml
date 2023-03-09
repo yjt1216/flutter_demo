@@ -46,6 +46,16 @@ dependencies:
   flutter_svg: ^1.0.3
   # 底部tab bar
   persistent_bottom_nav_bar: ^4.0.2
+  # 网络
+  dio: ^5.0.1
+  #轻提示  https://pub.dev/packages/fluttertoast
+  fluttertoast: ^8.0.8
+  # https://pub.flutter-io.cn/packages/sp_util/install
+  sp_util: ^2.0.3
+  # 格式化String https://github.com/Naddiseo/dart-sprintf
+  sprintf: ^6.0.0
+
+
 
 dev_dependencies:
   flutter_test:
