@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/pages/home/home.dart';
+import 'package:flutter_demo/pages/mine/mine.dart';
 import 'package:flutter_demo/pages/tab_bar/persistent_nav_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
@@ -21,42 +22,10 @@ class _PersistentBottomState extends State<PersistentBottomPage> {
 
   List<Widget> _buildScreens() {
     return [
-      HomePage(
-        menuScreenContext: widget.menuScreenContext,
-        hideStatus: _hideNavBar,
-        onScreenHideButtonPressed: () {
-          setState(() {
-            _hideNavBar = !_hideNavBar;
-          });
-        },
-      ),
-      HomePage(
-        menuScreenContext: widget.menuScreenContext,
-        hideStatus: _hideNavBar,
-        onScreenHideButtonPressed: () {
-          setState(() {
-            _hideNavBar = !_hideNavBar;
-          });
-        },
-      ),
-      HomePage(
-        menuScreenContext: widget.menuScreenContext,
-        hideStatus: _hideNavBar,
-        onScreenHideButtonPressed: () {
-          setState(() {
-            _hideNavBar = !_hideNavBar;
-          });
-        },
-      ),
-      HomePage(
-        menuScreenContext: widget.menuScreenContext,
-        hideStatus: _hideNavBar,
-        onScreenHideButtonPressed: () {
-          setState(() {
-            _hideNavBar = !_hideNavBar;
-          });
-        },
-      ),
+      const HomePage(),
+      const HomePage(),
+      const HomePage(),
+      const MinePage(),
     ];
   }
 
@@ -105,7 +74,7 @@ class _PersistentBottomState extends State<PersistentBottomPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(title: const Text('Navigation Bar Demo')),
+     // appBar: AppBar(title: const Text('Navigation Bar Demo')),
       body: PersistentTabView.custom(
         context,
         controller: _controller,
@@ -114,7 +83,7 @@ class _PersistentBottomState extends State<PersistentBottomPage> {
         itemCount: 4,
         handleAndroidBackButtonPress: true,
         stateManagement: true,
-        hideNavigationBar: _hideNavBar,
+        hideNavigationBar: _hideNavBar, //是否隐藏底部tab bar
         screenTransitionAnimation: const ScreenTransitionAnimation(
           animateTabTransition: true,
           curve: Curves.ease,

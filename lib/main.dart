@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter_demo/pages/tab_bar/tab_bar.dart';
 import 'package:flutter_demo/res/color/theme_config.dart';

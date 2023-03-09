@@ -5,11 +5,8 @@ import 'package:get/get.dart';
 ///tab_bar 子界面
 ///
 class HomePage extends StatefulWidget {
-  final BuildContext menuScreenContext;
-  final Function onScreenHideButtonPressed;
-  final bool hideStatus;
 
-  const HomePage({Key? key, required this.menuScreenContext, required this.onScreenHideButtonPressed, this.hideStatus = false}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -96,30 +93,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
 
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    widget.onScreenHideButtonPressed();
-                  },
-                  child: Text(
-                    widget.hideStatus
-                        ? "展示 Navigation Bar"
-                        : "隐藏 Navigation Bar",
-                    style: const TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(widget.menuScreenContext).pop();
-                  },
-                  child: const Text(
-                    "<- Main Menu",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
               const SizedBox(height: 60.0,),
             ],
           ),
